@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shruthi SK - Portfolio</title>
+    <link rel="icon" href="favicon.jpg" type="image/x-icon">
+    <style>
+        /* Common styles for all screen sizes */
+        body {
+            font-family: 'Zahrah';
+            margin: 0;
+            padding: 0;
+            background-color: #f7f2ee;
+        }
+
+        /* Header styles */
+        header {
+            background-color: transparent;
+            color: #333;
+            text-align: right;
+            padding: 40px 20px 20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1, nav {
+            margin: 0;
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: middle;
+            color: #b89884;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        /* Introduction styles */
+        .intro h2 {
+            font-size: 70px;
+            margin-top: 50px;
+            color: #aa7e63;
+        }
+
+        h3 {
+            font-size: 26px;
+            margin-top: -30px;
+            margin-bottom: 33px;
+            color: #b89884;
+        }
+
+        .intro p {
+            margin-top: -30px;
+            margin-bottom: 50px;
+            color: #b89884;
+            font-size: 23px;
+        }
+
+        /* Navigation styles */
+        nav a {
+            color: #b89884;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 16px;
+            position: relative;
+            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+
+        nav a:hover {
+            color: #000;
+            transform: translateX(100px);
+        }
+
+        /* Container styles */
+        .container {
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+            margin-bottom: 95px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        /* Profile picture styles */
+        .profile-pic {
+            border-radius: 50%;
+            width: 250px;
+            height: auto;
+            border: 5px solid #aa7e63;
+        }
+
+        /* Introduction container styles */
+        .intro-container {
+            text-align: left;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .intro {
+            font-size: 24px;
+            margin-bottom: 0px;
+        }
+
+        /* Circle container styles */
+        .circle-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 20px;
+            margin-right: 0px;
+        }
+
+        /* Circle styles */
+        .circle {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            color: #b89884;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            cursor: pointer;
+            border: 2px solid #aa7e63;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .circle:nth-child(1) {
+            background-color: #c8e0e7;
+        }
+
+        .circle:nth-child(2) {
+            background-color: #f3c3db;
+        }
+
+        .circle:nth-child(3) {
+            background-color: #dcccf3;
+        }
+
+        .circle:hover {
+            background-color: #c8b8ae;
+            color: #000;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #c8b8ae;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            padding: 25px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .contact-info.right strong {
+            margin-bottom: 100px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+        }
+
+        .contact-info span {
+            margin: 0 10px;
+        }
+
+        .contact-info span.center {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        /* Bubble Effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .trail {
+            position: absolute;
+            pointer-events: none;
+            z-index: 9999;
+            background: transparent;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            opacity: -5;
+            animation: fairyDust 1s ease-out forwards;
+        }
+
+        @keyframes fairyDust {
+            0% {
+                transform: translateY(0) scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) scale(1);
+                opacity: 0;
+            }
+        }
+
+        /* Media Query for Mobile Devices */
+        @media screen and (max-width: 767px) and (min-height: 667px) {
+            /* Update styles for mobile devices here */
+            header {
+                padding: 20px;
+            }
+
+            .intro h2 {
+                font-size: 40px;
+                margin-bottom: 35px;
+            }
+            header h1 {
+        font-size: 14px; /* Adjust the font size as needed */
+             }
+             nav{
+                display: none;
+             }
+            h3 {
+                font-size: 20px; /* Reduce font size for mobile devices */
+                margin-bottom: 40px; /* Adjust margin */
+            }
+
+            .intro p {
+                font-size: 18px; /* Reduce font size for mobile devices */
+            }
+
+            .container {
+                flex-direction: column; /* Stack elements vertically */
+                margin-top: 0px; /* Adjust top margin */
+                margin-bottom: 20px; /* Adjust bottom margin */
+                text-align: center; /* Center-align text */
+                padding: 20px; /* Adjust padding */
+            }
+
+            .profile-pic {
+                display:none; /* Reduce image size for mobile devices */
+            }
+
+            .intro-container {
+                width: 100%; /* Take full width on mobile devices */
+            }
+
+            .circle-container {
+                margin-top: 0px;
+                margin-bottom: -100px; /* Adjust margin */
+                flex-direction: 0; 
+            }
+
+            .circle {
+                width: 80px; /* Reduce circle size for mobile devices */
+                height: 80px; /* Reduce circle size for mobile devices */
+                font-size: 14px; /* Reduce font size for mobile devices */
+                margin-right: 20px;/* Remove right margin for mobile devices */
+                margin-bottom: 10px; /* Adjust margin for mobile devices */
+            }
+
+            .contact-info strong {
+                margin-bottom: 0px; /* Adjust margin */
+            }
+            .circle:nth-child(3) {
+               display: none;
+            }
+            footer {
+                flex-direction: column; /* Stack footer items vertically */
+                margin-top:200px;
+                margin-bottom: 0;/* Adjust padding */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shruthi S K</h1>
+        <nav>
+            <a href="resume.html">Resume</a> |
+            <a href="projects.html">Projects</a> |
+            <a href="#contact">Contact</a> <!-- Updated the Contact link -->
+        </nav>
+    </header>
+    <div class="container">
+        <img class="profile-pic" src="profilepic.jpeg" alt="Shruthi SK">
+        <div class="intro-container">
+            <div class="intro">
+                <h2>Hello</h2>
+                <h3>A bit about me</h3>
+                <p>📊 Data Enthusiast | 📈 Analytics & ML | 🍳 Amateur Chef | <br>Passionate about data analysis, visualization, and machine learning. Turning data into insights that drive decisions.<br>Skilled in Python, R, SQL, and data-driven decision-making. Let's connect and explore data's potential together! </p>
+            </div>
+            <div class="circle-container">
+                <div class="circle" onclick="window.location.href='resume.html'">
+                    Resume
+                </div>
+                <div class="circle" onclick="window.location.href='projects.html'">
+                    Projects
+                </div>
+                <div class="circle" onclick="window.location.href='#contact'">
+                    Contact
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="contact"> <!-- Added an id to the footer -->
+        <p class="contact-info center" style="margin-left: 40px;">
+            <strong>Email </strong><br>
+            <a href="mailto:shruthiisk114@gmail.com">shruthiisk114@gmail.com </a>
+            
+        </p>
+        
+        <p class="contact-info right">
+            <strong>Let's Connect </strong><br>
+            <a href="https://www.linkedin.com/in/shruthi-s-k-654151214/" target="_blank" style="margin-right: 6px; margin-top: 40px;" rel="noopener">
+                <i class="fab fa-linkedin fa-lg"></i>
+            </a> 
+            <a href="https://github.com/shruthii11" target="_blank" style="margin-left: 6px; margin-top: 40px;" rel="noopener">
+                <i class="fab fa-github fa-lg"></i>
+            </a>
+            <a href="https://www.kaggle.com/shruthiiiee" target="_blank" style="margin-left: 12px; margin-top: 40px;" rel="noopener">
+                <i class="fab fa-kaggle fa-lg"></i>
+            </a>
+        </p>
+        
+        <p style="margin-right: 15px;">&copy; 2023 Shruthi S K. All Rights Reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('mousemove', createTrail);
+
+        function createTrail(e) {
+            const trail = document.createElement('div');
+            trail.className = 'trail';
+            document.body.appendChild(trail);
+
+            const colors = ['#c8e0e7', '#f3c3db', '#dcccf3'];
+            const color = colors[Math.floor(Math.random() * colors.length)];
+
+            trail.style.left = `${e.clientX}px`;
+            trail.style.top = `${e.clientY}px`;
+            trail.style.backgroundColor = color;
+
+            trail.addEventListener('animationend', () => {
+                trail.remove();
+            });
+        }
+    </script>
+</body>
+</html>

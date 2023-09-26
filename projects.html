@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Shruthi SK</title>
+    <link rel="icon" href="favicon.jpg" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Zahrah';
+            margin: 0;
+            padding: 0;
+            background-color: #f7f2ee;
+        }
+        header {
+            background-color: transparent;
+            color: #333;
+            text-align: right;
+            padding: 40px 20px 20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1, nav {
+            margin: 0;
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: middle;
+            color: #b89884;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        p{
+            margin-bottom: 0px;
+        }
+        nav a {
+            color: #b89884;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 16px;
+        }
+        .projects-content {
+            margin: 20px;
+            padding: 20px;
+        }
+        .projects-title {
+            font-size: 48px;
+            color: #aa7e63;
+            font-weight: bold;
+        }
+        .project {
+            margin-top: 40px;
+            display: flex; /* Make each project a flex container */
+            align-items: flex-start; /* Align items to the top of the container */
+        }
+        nav a:hover {
+            color: #000; /* Change font color to black on hover */
+            transform: translateX(100px); /* Move the text 10 pixels to the right on hover */
+        }
+        .project-name {
+            font-size: 24px;
+            color: #b89884;
+            font-weight: bold;
+        }
+        .project-description {
+            font-size: 16px;
+            color: #b89884;
+            margin-top: 10px;
+        }
+        .project-gif {
+            width: 350px;
+            margin-left: 270px;
+           
+        }
+        .project:nth-child(7) .project-gif {
+            width: 200px; 
+            height: 370px;
+        }
+        .project:nth-child(5) .project-gif {
+            width: 300px; 
+        }
+        @media screen and (max-width: 767px) and (min-height: 667px) {
+            
+            .project {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        
+        }
+        .project-gif {
+            width: 100%; 
+            margin-bottom: 70px;
+            margin-right: 150px;
+            margin-top:20px;
+            flex-direction: column-reverse;
+        }
+    
+        .project-name {
+            text-align: center;
+        }
+        nav {
+            margin-left: auto;
+            padding-right: 20px; /* Adjust the padding for spacing */
+        }
+        nav a {
+            text-align: right;
+        }
+        .back{
+            align-content: right;
+        }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shruthi S K</h1>
+        <nav>
+            <a class="back" href="portfolio.html">Back to Portfolio</a>
+        </nav>
+    </header>
+
+    <div class="projects-content">
+        <div class="projects-title">Projects</div>
+        
+        
+        <div class="project">
+            <div class="project-details">
+                <div class="project-name">Book Recommendation System</div>
+                <div class="project-description">
+                   <p>This is a Book Recommendation System, It's like having your own personal book guru.
+                   Just tell it the name of a book you love, and it will instantly recommend similar books 
+                   based on genre and similarity.
+                   No need to sift through endless lists or ratings, this system uses clever algorithms to find
+                   books that match your unique taste. It's all about making book discovery fun and effortless.
+                </div>
+            </div>
+            <a href="https://github.com/shruthii11/book-recommender-system/tree/master">
+            <img class="project-gif" src="book.gif" alt="Project 02 Gif">
+        </a>
+        </div>
+        <div class="project">
+            <div class="project-details">
+                <div class="project-name">World Happiness Analysis Dashboard</div>
+                <div class="project-description">
+                   <p>A Tableau Dashboard of World Happiness Report spanning 2015 to 2023.
+                    With interactive year filters, it's your passport to global happiness insights. From dynamic plots to insightful maps, this project turns data into a visual story. 
+                   </p>
+                </div>
+            </div>
+            <a href="https://public.tableau.com/app/profile/shruthi.s.k/viz/WorldHappinessDashboard_16947061247670/WorldHappinessDashboard">
+            <img class="project-gif" src="happiness.gif" alt="Project 03 Gif">
+            </a>
+        </div>
+        
+        <div class="project">
+            <div class="project-details">
+                <div class="project-name">My Spotify Analysis Dashboard</div>
+                <div class="project-description">
+                    <p>A Tableau Dashboard featuring my Spotify data, including streaming history, artists, albums, and much more. This analysis has been instrumental in gaining insights into my streaming history, helping identify my top songs and favorite artists, among other things.</p>
+                </div>
+            </div>
+            <a href="https://public.tableau.com/app/profile/shruthi.s.k/viz/SpotifyDashboard_16952372917730/SpotifyDashboard?publish=yes">
+            <img class="project-gif" src="spotify.gif" alt="Project 03 Gif">
+            </a>
+        </div>
+       
+        <div class="project">
+            <div class="project-details">
+                <div class="project-name">Gesture and Emotion Detection through MediaPipe and OpenCV</div>
+                <div class="project-description">
+                    <p>Developed Gesture Recognition and Emotion Detection
+                        systems using MediaPipe and OpenCV.
+                        Applied computer vision techniques to analyze gestures
+                        and emotions from multimedia data in real-time, enhancing user
+                        experiences and enabling intuitive human-computer
+                        interaction.</p>
+                </div>
+            </div>
+            <a href="https://github.com/shruthii11/Gesture_emotion_recognition_system">
+            <img class="project-gif" src="Emotion.gif" alt="Project 03 Gif">
+            </a>
+        </div>
+        <div class="project">
+            <div class="project-details">
+                <div class="project-name">Responsive Blog Application</div>
+                <div class="project-description">
+                    <p>Developed a responsive blog site where users (Admin and
+                        Authors) can create, edit, update, and publish articles.
+                        Utilized XAMPP for backend functionality and JavaScript,
+                        HTML, and CSS for frontend design, ensuring a seamless
+                        user experience and visually appealing layout.</p>
+                </div>
+            </div>
+            <a href="https://github.com/shruthii11/Responsive_Blog_Website">
+            <img class="project-gif" src="blog.gif" alt="Project 01 Gif">
+            </a>
+        </div>
+        <div class="project">
+            <div class="project-details">
+                <div class="project-name">Habit Builder and Tracker Application</div>
+                <div class="project-description">
+                    <p>Developed a feature-rich Android application that offers
+                        21-day challenges across various categories.
+                        Includes a to-do list feature to help users stay organized
+                        and manage their tasks effectively during the challenges.</p>
+                </div>
+            </div>
+            <a href="https://github.com/shruthii11/betterME">
+            <img class="project-gif" src="app.gif" alt="Project 03 Gif">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
